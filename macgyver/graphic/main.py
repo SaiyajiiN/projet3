@@ -1,4 +1,3 @@
-
 import os
 import sys
 
@@ -6,25 +5,33 @@ import pygame
 
 from macgyver.labyrinthe import Labyrinthe
 from macgyver.directions import right, left, up, down
-from macgyver.graph.labyrinthe import LabyrintheDisplay
-from macgyver.graph.hero import HeroSprite
-from macgyver.graph.items import ItemSprite
-from macgyver.graph.guardian import GuardianSprite
+from macgyver.graphic.labyrinthe import LabyrintheDisplay
+from macgyver.graphic.hero import HeroSprite
+from macgyver.graphic.items import ItemSprite
+from macgyver.graphic.guardian import GuardianSprite
 from macgyver.constants import SPRITE_HEIGHT, SPRITE_WIDTH
 
 
-if not pygame.font: print('Attention, polices désactivées')
-if not pygame.mixer: print('Attention, son désactivé')
+if not pygame.font:
+    print('Attention, polices désactivées')
+if not pygame.mixer:
+    print('Attention, son désactivé')
 
 
 class Game:
     """Créez la fenêtre de jeu et ajoutez le héros, les objets et le gardien."""
+
     def __init__(self):
         pygame.init()
 
         self.labyrinthe = Labyrinthe()
         self.labyrinthe.read_file()
-        self.screen = pygame.display.set_mode((SPRITE_WIDTH * self.labyrinthe.width, SPRITE_HEIGHT * (self.labyrinthe.height + 1)))
+        self.screen = pygame.display.set_mode(
+            (
+                SPRITE_WIDTH * self.labyrinthe.width,
+                SPRITE_HEIGHT * (self.labyrinthe.height + 1),
+            )
+        )
         self.screen.fill((0, 0, 0))
         self.background = LabyrintheDisplay(self.labyrinthe)
         self.allsprites = pygame.sprite.Group()
@@ -72,9 +79,11 @@ class Game:
                     running = False
             pygame.display.update()
 
+
 def main():
     game = Game()
     game.start()
+
 
 if __name__ == "__main__":
     main()

@@ -1,15 +1,18 @@
 def up(position):
-    x, y = position
-    return (x, y-1)
+    y, x = position
+    return (y - 1, x)
+
 
 def down(position):
-    x, y = position
-    return (x, y+1)
+    y, x = position
+    return (y + 1, x)
+
 
 def right(position):
-    x, y = position
-    return (x+1, y)
+    y, x = position
+    return (y, x + 1)
+
 
 def left(position):
-    x, y = position
-    return (x-1, y)
+    y, x = position
+    return (y, x - 1)
