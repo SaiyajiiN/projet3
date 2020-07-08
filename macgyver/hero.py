@@ -22,6 +22,7 @@ class Hero:
         return True
 
     def catch_item(self, index, item):
+        """Déplacer des objets après les avoir récupérés."""
         item.status = "catched"
         self.count_items.append(item)
         del self.labyrinthe.items[index]

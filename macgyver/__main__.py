@@ -1,4 +1,4 @@
-from macgyver.display.main import main
+from macgyver.graphic.main import main
 
 if __name__ == "__main__":
     main()
