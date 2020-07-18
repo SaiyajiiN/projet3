@@ -22,10 +22,10 @@ class Labyrinthe:
             #POUR chaque numéro_ligne et ligne dans fichier FAIRE
             for position_ligne, ligne in enumerate(file):
                 #POUR chaque numéro_caractère et caractère DANS ligne FAIRE
-                for position, character in enumerate(ligne):
+                for position, character in enumerate(ligne.strip()):
                     #SI caractère est "D" FAIRE
                     if character == "D":
-                        #self.depart <- (0, numéro_caractère)
+                        #self.hero <- (0, numéro_caractère)
                         self.macgyver = hero.Hero(
                             (position_ligne, position), self
                         )

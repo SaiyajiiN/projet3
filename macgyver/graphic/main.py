@@ -29,7 +29,7 @@ class Game:
         self.screen = pygame.display.set_mode(
             (
                 SPRITE_WIDTH * self.labyrinthe.width,
-                SPRITE_HEIGHT * (self.labyrinthe.height + 1),
+                SPRITE_HEIGHT * (self.labyrinthe.height),
             )
         )
         self.screen.fill((0, 0, 0))
