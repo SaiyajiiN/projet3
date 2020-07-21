@@ -35,7 +35,7 @@ class Game:
         self.screen.fill((0, 0, 0))
         self.background = LabyrintheDisplay(self.labyrinthe)
         self.allsprites = pygame.sprite.Group()
-        self.allsprites.add(HeroSprite(self.labyrinthe.macgyver))
+        self.allsprites.add(HeroSprite(self.labyrinthe.macgyver,self.screen))
         for item in self.labyrinthe.items:
             self.allsprites.add(ItemSprite(item))
         self.allsprites.add(GuardianSprite(self.labyrinthe.guardian))
@@ -80,7 +80,7 @@ class Game:
         running = True
         while running:
             self.clock.tick(20)
-            self.screen.blit(pygame.image.load(image), (0, 0))
+            self.screen.blit(pygame.image.load(image), (120, 120))
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
