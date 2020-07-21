@@ -24,6 +24,6 @@ class HeroSprite(pygame.sprite.Sprite):
         self.update_item_counter()
 
     def update_item_counter(self):
-        counter_message = "objet trouver {}/3".format(len(self.hero.count_items))
-        self.screen.blit(counter_message,(300,420))
-        
+        font = pygame.font.Font('freesansbold.ttf', 20)
+        counter_message = font.render("objet trouver {}/3".format(len(self.hero.count_items)), True, (255,255,255))
+        self.screen.blit(counter_message,(250,420))
