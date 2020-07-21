@@ -7,10 +7,7 @@ This project is part of the macgyver game #3 challenge from the OpenClassRoom Py
 
 Clone the repo, open terminal on the folder then:
 ```
-source env/bin/activate
-```
-```
-python3 -m macgyver
+pipenv run python3 -m macgyver
 ```
 
 
