@@ -1,4 +1,5 @@
-import os, pygame
+import os
+import pygame
 
 
 def __str__(self):

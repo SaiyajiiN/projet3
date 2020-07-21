@@ -17,13 +17,13 @@ class Labyrinthe:
         self.items = []
 
     def read_file(self):
-        #ouvrir le fichier labyrinthe.txt en tant que fichier
+        # ouvrir le fichier labyrinthe.txt en tant que fichier
         with open('labyrinthe.txt', 'r') as file:
-            #POUR chaque numéro_ligne et ligne dans fichier FAIRE
+            # POUR chaque numéro_ligne et ligne dans fichier FAIRE
             for position_ligne, ligne in enumerate(file):
-                #POUR chaque numéro_caractère et caractère DANS ligne FAIRE
+                # POUR chaque numéro_caractère et caractère DANS ligne FAIRE
                 for position, character in enumerate(ligne.strip()):
-                    #SI caractère est "D" FAIRE
+                    # SI caractère est "D" FAIRE
                     if character == "D":
                         #self.hero <- (0, numéro_caractère)
                         self.macgyver = hero.Hero(
@@ -31,15 +31,15 @@ class Labyrinthe:
                         )
                         self.start = (position_ligne, position)
                         self.paths.append((position_ligne, position))
-                        #SINON SI caractère est "." FAIRE
+                        # SINON SI caractère est "." FAIRE
                     elif character == ".":
-                        #Ajouter (0, numéro_caractère) à la liste self.paths
+                        # Ajouter (0, numéro_caractère) à la liste self.paths
                         self.paths.append((position_ligne, position))
-                        #SINON SI caractère est "#" FAIRE
+                        # SINON SI caractère est "#" FAIRE
                     elif character == "#":
-                        #Ajouter (0, numéro_caractère) à la liste self.walls
+                        # Ajouter (0, numéro_caractère) à la liste self.walls
                         self.walls.append((position_ligne, position))
-                        #SINON SI caractère est "A" FAIRE
+                        # SINON SI caractère est "A" FAIRE
                     elif character == "A":
                         #self.guardian <- (position_ligne, numéro_caractère)
                         self.guardian = guardian.Guardian(
