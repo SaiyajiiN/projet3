@@ -2,6 +2,13 @@
 
 This project is part of the macgyver game #3 challenge from the OpenClassRoom Python course.
 
+## Requirements:
+
+```
+sudo apt install python3-pip
+python3 -m pip install pipenv
+python3 -m pip install pygame 
+```
 
 ## How to run:
 
