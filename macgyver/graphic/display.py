@@ -1,7 +1,3 @@
-import os
-import pygame
-
-
 def __str__(self):
     """Retourne le texte du labyrinthe pour afficher avec print."""
     laby = ""

@@ -5,7 +5,10 @@ from macgyver.constants import SPRITE_HEIGHT, SPRITE_WIDTH
 
 
 class GuardianSprite(pygame.sprite.Sprite):
-    """Détermine la position du gardien dans le labyrinthe et charge une image du gardien."""
+    """
+        Détermine la position du gardien dans
+        le labyrinthe et charge une image du gardien.
+    """
 
     def __init__(self, guardian):
         """Chargez l'image du gardien."""

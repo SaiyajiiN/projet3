@@ -2,7 +2,6 @@ import random
 from macgyver import hero
 from macgyver import guardian
 from macgyver import items
-from macgyver import directions
 from macgyver import constants
 
 
@@ -25,7 +24,7 @@ class Labyrinthe:
                 for position, character in enumerate(ligne.strip()):
                     # SI caractère est "D" FAIRE
                     if character == "D":
-                        #self.hero <- (0, numéro_caractère)
+                        # self.hero <- (0, numéro_caractère)
                         self.macgyver = hero.Hero(
                             (position_ligne, position), self
                         )
@@ -41,7 +40,7 @@ class Labyrinthe:
                         self.walls.append((position_ligne, position))
                         # SINON SI caractère est "A" FAIRE
                     elif character == "A":
-                        #self.guardian <- (position_ligne, numéro_caractère)
+                        # self.guardian <- (position_ligne, numéro_caractère)
                         self.guardian = guardian.Guardian(
                             (position_ligne, position), self
                         )

@@ -15,11 +15,14 @@ class ItemSprite(pygame.sprite.Sprite):
     def update(self):
         """Détermine les positions des images."""
         if self.item.status == "not catched":
-            # postion horizontale depuis le coin gauche de la fenêtre (pixels)
-            self.rect.x = (self.item.position[1] * SPRITE_WIDTH)
+            self.rect.x = (
+                self.item.position[1] * SPRITE_WIDTH
+            )
+            # postion horizontale le coin gauche de la fenêtre
             self.rect.y = (
                 self.item.position[0] * SPRITE_HEIGHT
-            )  # postion verticale depuis le haut de la fenêtre (pixels)
+            )
+            # postion verticale depuis coindroite de la fenêtre
         else:
             self.rect.x = -1 * SPRITE_WIDTH
             self.rect.y = -1 * SPRITE_HEIGHT

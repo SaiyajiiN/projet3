@@ -1,7 +1,5 @@
-import os
-import sys
-
 import pygame
+
 
 from macgyver.labyrinthe import Labyrinthe
 from macgyver.directions import right, left, up, down
@@ -19,10 +17,14 @@ if not pygame.mixer:
 
 
 class Game:
-    """Créez la fenêtre de jeu et ajoutez le héros, les objets et le gardien."""
+    """
+        Créez la fenêtre de jeu et ajoutez le héros,
+        les objets et le gardien.
+    """
 
     def __init__(self):
-        pygame.init()  # Pygame is initialized
+        pygame.init()
+        # Pygame is initialized
 
         self.labyrinthe = Labyrinthe()
         self.labyrinthe.read_file()
@@ -42,14 +44,15 @@ class Game:
         self.clock = pygame.time.Clock()
 
     def start(self):
-        """Lancement du jeu et affectation des touches fléchées du héros."""
+        """
+            Lancement du jeu et affectation des touches fléchées du héros.
+        """
         running = True
         while running:
             self.clock.tick(40)
             self.screen.blit(self.background, (0, 0))
             for event in pygame.event.get():
-                # Recherche tous les événements qui se produisent pendant le
-                # jeu
+                # Recherche tous les événements qui se produisent pendant le jeu
                 if event.type == pygame.QUIT:
                     running = False
                 # La boucle est arrêtée et les fenêtres de jeu sont fermées

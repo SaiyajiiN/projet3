@@ -5,7 +5,8 @@ from pygame.compat import geterror
 from macgyver.constants import SPRITE_WIDTH, SPRITE_HEIGHT
 
 
-def load_image(name, colorkey=None):  # fonctions pour créer nos ressources
+def load_image(name, colorkey=None):
+    # fonctions pour créer nos ressources
     """Méthode pour charger une image."""
     fullname = os.path.join("ressource", name)
     try:

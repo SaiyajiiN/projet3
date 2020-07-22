@@ -9,7 +9,10 @@ class Hero:
         self.status = None
 
     def move(self, direction):
-        """Créez la position de départ du héros et les positions après le mouvement."""
+        """
+            Créez la position de départ du héros
+            et les positions après le mouvement.
+        """
         position = direction(position=self.position)
         if position in self.labyrinthe.paths:
             self.position = position
